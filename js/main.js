@@ -21,7 +21,6 @@ $('.value').on('click', function() {
   window.open(url, '_blank');
 });
 
-
 //analytics
 $('.tree_analytics > .col > .role').on('click', function() {
   var url = "ExecutiveDataScientist.pdf";
