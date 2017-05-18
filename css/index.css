@@ -183,6 +183,10 @@
   cursor: pointer;
 }
 
+.value:hover {
+  color: white;
+}
+
 .value_container {
   font-family: "Aachen";
   background-color: #FFCC00;

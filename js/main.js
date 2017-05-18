@@ -16,6 +16,11 @@ $('.icon_close').on('click', function() {
   $('.modal').hide();
 });
 
+$('.value').on('click', function() {
+  var url = "http://commnet2.cba/Main/about-cba/vision-and-values/Pages/default.aspx";
+  window.open(url, '_blank');
+});
+
 
 //analytics
 $('.tree_analytics > .col > .role').on('click', function() {
