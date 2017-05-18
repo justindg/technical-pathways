@@ -1,6 +1,4 @@
-.header {
-  overflow: auto;
-}
+
 
 .accent {
   overflow: auto;
@@ -22,11 +20,6 @@
 .accent_gold {
   background-color: #FFCC00;
   width: 70%;
-}
-
-.logo_can {
-  float: left;
-  padding: 10px;
 }
 
 .banner_container {
@@ -63,23 +56,6 @@
   font-family: "RobotoThin", "Arial", sans-serif;
 }
 
-.statement {
-  text-align: center;
-  color: black;
-  overflow: auto;
-}
-
-.statement .title {
-  font-size: 1.5em;
-  font-family: "Roboto", sans-serif;
-  margin-bottom: 10px;
-}
-
-.statement .description {
-  font-family: "RobotoLight", sans-serif;
-  padding: 0 12%;
-}
-
 .btn_hello {
   background-color: darkorange;
   padding: 15px 30px;
@@ -96,15 +72,11 @@
   bottom: 30px;
 }
 
-.statement {
-  text-align: center;
-  padding: 20px 70px;
-  background-color: white;
-}
+
 
 .pathways {
   font-family: "ProximaNovaBold", sans-serif;
-  padding: 20px;
+  padding: 0 20px;
   text-align: center;
   overflow: auto;
   background-color: white;
@@ -200,7 +172,7 @@
 
 .values {
   overflow: auto;
-  padding: 10px 30px;
+  padding: 0 30px;
 }
 
 .value {
@@ -240,8 +212,7 @@
 }
 
 .faq {
-  padding-left: 80px;
-  padding-right: 80px;
+  margin-top: 20px;
 }
 
 .faq > div {

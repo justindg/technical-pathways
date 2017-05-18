@@ -314,6 +314,42 @@ textarea {
     }
 }
 
+.header {
+  height: 80px;
+}
+
+.header .menu {
+  line-height: 30px;
+  float: right;
+  padding: 25px 30px;
+  background-color: #FFCC00;
+  cursor: pointer;
+}
+
+.logo_can {
+  float: left;
+  padding: 10px;
+}
+
+.statement {
+  text-align: center;
+  color: black;
+  overflow: auto;
+  padding: 30px 70px 10px 70px;
+  background-color: white;
+}
+
+.statement .title {
+  font-size: 1.5em;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 10px;
+}
+
+.statement .description {
+  font-family: "RobotoLight", sans-serif;
+  padding: 0 12%;
+}
+
 .modal {
   position: fixed;
   display: flex;

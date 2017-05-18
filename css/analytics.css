@@ -72,23 +72,6 @@
   font-family: "RobotoThin", "Arial", sans-serif;
 }
 
-.statement {
-  text-align: center;
-  color: black;
-  overflow: auto;
-}
-
-.statement .title {
-  font-size: 1.5em;
-  font-family: "Roboto", sans-serif;
-  margin-bottom: 10px;
-}
-
-.statement .description {
-  font-family: "RobotoLight", sans-serif;
-  padding: 0 12%;
-}
-
 .btn_hello {
   background-color: darkorange;
   padding: 15px 30px;
@@ -103,12 +86,6 @@
   position: absolute;
   left: 200px;
   bottom: 30px;
-}
-
-.statement {
-  text-align: center;
-  padding: 20px 70px;
-  background-color: white;
 }
 
 .footer {
