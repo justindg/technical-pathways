@@ -1,22 +1,42 @@
-.slick-dots {
-  /*position: absolute;
-  bottom: -35px;*/
-}
-
-.slick-prev {
-  color: red;
-  z-index: 999;
-  font-size: 10px;
-}
-
 .header {
   overflow: auto;
 }
 
-.header > div {
+.accent {
+  overflow: auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  background-color: #eee;
+}
+
+.accent > div {
+  height: 10px;
   float: left;
-  padding: 15px;
-  font-weight: 800;
+}
+
+.accent_blue {
+  background-color: #54C2E8;
+  width: 30%;
+}
+
+.accent_gold {
+  background-color: #FFCC00;
+  width: 70%;
+}
+
+.logo_can {
+  float: left;
+  padding: 20px;
+}
+
+.menu {
+  float: right;
+  background-color: #FFCC00;
+}
+
+.menu > img {
+  text-align: center;
+  padding: 20px 30px;
 }
 
 .banner_container {
@@ -29,32 +49,45 @@
 }
 
 .banner {
-  background-color: #ddd;
-  background-image: url('../img/banner.jpg');
+  background-color: #333;
+  /*background-image: url('../img/analytics.jpg');*/
   background-size: cover;
   background-position: center;
   position: relative;
-
   padding: 80px 30px;
   box-sizing: border-box;
-
-  box-shadow: 0px 5px 10px grey;
 }
 
 .banner_title1 {
-  width: 40%;
   color: white;
-  font-size: 3em;
+  font-size: 3.5em;
   line-height: 1em;
-  font-family: "ProximaNovaBold", "Arial", sans-serif;
+  font-family: "RobotoThin", sans-serif;
 }
 
 .banner_title2 {
-  width: 40%;
+  width: 60%;
   color: white;
-  font-size: 0.8em;
-  line-height: 1.2em;
-  font-family: "HelveticaLt", "Arial", sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  font-family: "RobotoThin", "Arial", sans-serif;
+}
+
+.statement {
+  text-align: center;
+  color: black;
+  overflow: auto;
+}
+
+.statement .title {
+  font-size: 1.5em;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 15px;
+}
+
+.statement .description {
+  font-family: "RobotoLight", sans-serif;
+  padding: 0 12%;
 }
 
 .btn_hello {

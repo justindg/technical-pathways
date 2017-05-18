@@ -11,33 +11,23 @@
    ========================================================================== */
 
  @font-face {
-   font-family: "Helvetica";
-   src: url("fonts/Helvetica.ttf");
+   font-family: "Roboto";
+   src: url("fonts/Roboto-Regular.ttf");
  }
 
  @font-face {
-   font-family: "HelveticaLt";
-   src: url("fonts/HelveticaLt.OTF");
+   font-family: "RobotoLight";
+   src: url("fonts/Roboto-Light.ttf");
  }
 
  @font-face {
-   font-family: "HelveticaBold";
-   src: url("fonts/HelveticaNeue-Bold.ttf");
+   font-family: "RobotoThin";
+   src: url("fonts/Roboto-Thin.ttf");
  }
 
  @font-face {
-   font-family: "HelveticaBlk";
-   src: url("fonts/HelveticaBlk.OTF");
- }
-
- @font-face {
-   font-family: "ProximaNovaBold";
+   font-family: "Proxima";
    src: url("fonts/ProximaNova-Bold.ttf");
- }
-
- @font-face {
-   font-family: "AachenBold";
-   src: url("fonts/AachenBold.TTF");
  }
 
 b {
