@@ -42,6 +42,7 @@ html {
 body {
   background-color: #fff;
   padding: 0px 24px;
+  width: 1200px;
 }
 
 /*
@@ -311,4 +312,258 @@ textarea {
     h3 {
         page-break-after: avoid;
     }
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-border {
+  width: inherit;
+  height: inherit;
+  overflow: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: red;
+  z-index: 3;
+}
+
+.modal-home {
+  display: none;
+}
+
+.modal .content {
+  z-index: 2;
+  position: relative;
+  padding: 30px 30px 30px 30px;
+  box-sizing: border-box;
+  align-self: center;
+  position: fixed;
+  height: 90%;
+  width: 95%;
+  background-color: white;
+  overflow: auto;
+}
+
+.modal .content .close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  text-align: right;
+  color: black;
+  cursor: pointer;
+}
+
+.modal .content .title {
+  font-family: "Roboto";
+  font-size: 1.5em;
+  color: #54C2E8;
+}
+
+.modal .content .focus {
+
+}
+
+.modal .content .video {
+  margin: 10px 0;
+}
+
+.modal .content .description {
+  font-family: "RobotoLight";
+}
+
+.modal .content .description .purpose {
+  width: 80%;
+  float: left;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.modal .content .description .purpose .heading {
+  font-size: 1.2em;
+  margin: 10px 0 10px 0;
+  font-family: "Roboto";
+}
+
+.modal .content .description .links {
+  width: 20%;
+  float: left;
+  padding: 10px 10px 0 10px;
+  box-sizing: border-box;
+}
+
+.key_responsibilities {
+  padding-left: 20px;
+  margin: 0;
+}
+.key_responsibilities > li {
+  /*padding: 5px 0;*/
+}
+
+.ul_links {
+  margin: 10px 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.ul_links > li {
+  color: #54C2E8;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.ul_links > li:hover {
+  text-decoration: underline;
+}
+
+/** TREE **/
+.tree {
+  overflow: auto;
+  margin: 0 0 20px 0;
+  font-size: 0.8em;
+}
+
+.col {
+  min-height: 100px;
+  width: 20%;
+  float: left;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.path_label {
+  text-align: center;
+  background-color: #fff;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.path_label > div {
+  background-color: #eee;
+  padding: 10px 0 10px 0;
+  font-family: "RobotoThin";
+}
+
+.role_spacer {
+  text-align: center;
+  background-color: #fff;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.role_spacer > div {
+  background-color: #eee;
+  padding: 0;
+  font-family: "RobotoThin";
+}
+
+.role_spacer_end {
+  background-color: white;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.role_spacer_end > div {
+  height: 30px;
+  background-color: #eee;
+}
+
+.role {
+  overflow: auto;
+  border: 1px solid #eee;
+  cursor: pointer;
+}
+
+.role:hover {
+  background-color: #f8f8f8;
+}
+
+.role .label {
+  height: 60px;
+  width: 70%;
+  float: left;
+  padding: 15px 10px;
+  box-sizing: border-box;
+  font-family: "RobotoLight";
+}
+
+.role .icon {
+  text-align: center;
+  width: 30%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  float: left;
+  box-sizing: border-box;
+}
+
+.role .icon > img {
+  align-self: center;
+}
+
+.gold {
+  background-color: #FFCC00;
+}
+
+.blue {
+  background-color: #54C2E8;
+}
+
+.circle_container {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.circle:hover {
+  background-color: #f8f8f8;
+}
+
+.circle {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background-color: #eee;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px gray;
+  border-radius: 300px;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+}
+
+.circle > div {
+  align-self: center;
+  font-family: "RobotoLight";
+}
+
+.top_spacer {
+  height: 80px;
+  width: 100%;
+}
+
+.mid_spacer {
+  height: 200px;
+  width: 100%;
+}
+
+.circle_spacer {
+  text-align: center;
+  background-color: #fff;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-family: "RobotoThin";
 }

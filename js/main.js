@@ -1,82 +1,38 @@
-$('.banner_carousel').slick({
-  dots: true,
-  infinite: true,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  arrows: false,
-  pauseOnHover: false
+$('.pathway_analytics').on('click', function() {
+  var url = "analytics.html";
+  window.open(url, '_self');
 });
 
-$('.interlock_carousel').slick({
-  dots: true,
-  infinite: true,
-  autoplay: true,
-  arrows: true,
-  autoplaySpeed: 8000,
-  pauseOnHover: false
+$('.pathway_engineering').on('click', function() {
+  var url = "engineering.html";
+  window.open(url, '_self');
 });
 
-var closeStartHelper = function() {
-  if ($('.helper_start').is(':visible')) {
-    $('.helper_start').fadeOut(100);
+$('.tree_home > .col > .role').on('click', function() {
+  $('.modal').show();
+});
+
+$('.icon_close').on('click', function() {
+  $('.modal').hide();
+});
+
+
+//analytics
+$('.tree_analytics > .col > .role').on('click', function() {
+  var url = "ExecutiveDataScientist.pdf";
+  window.open(url, '_blank');
+});
+
+//engineering
+$('.pillar').on('click', function() {
+  $('.pillar').removeClass('pillar_active');
+  $(this).addClass('pillar_active');
+
+  if ($(this).hasClass('pillar_data')) {
+    $('.pillar_title').text('Data Engineering');
+  } else if ($(this).hasClass('pillar_infra')) {
+    $('.pillar_title').text('Infrastructure Engineering');
+  } else if ($(this).hasClass('pillar_software')) {
+    $('.pillar_title').text('Software Engineering');
   }
-}
-
-$('#pillar_ic').on('click', function() {
-  closeStartHelper();
-  $('.pillar_container').removeClass('pillar_container_active');
-  $(this).addClass('pillar_container_active');
-  $('.content').hide();
-  $('.content_ic').fadeIn(200);
-
-  $(this)[0].scrollIntoView(true);
 });
-
-$('#pillar_ui').on('click', function() {
-  closeStartHelper();
-  $('.pillar_container').removeClass('pillar_container_active');
-  $(this).addClass('pillar_container_active');
-  $('.content').hide();
-  $('.content_ui').fadeIn(200);
-
-  $(this)[0].scrollIntoView(true);
-});
-
-$('#pillar_rp').on('click', function() {
-  closeStartHelper();
-  $('.pillar_container').removeClass('pillar_container_active');
-  $(this).addClass('pillar_container_active');
-  $('.content').hide();
-  $('.content_rp').fadeIn(200);
-
-  $(this)[0].scrollIntoView(true);
-});
-
-$('.service').on('mouseenter', function() {
-  $(this).find('.service_container').hide();
-  $(this).find('.service_container_back').show();
-  $(this).find('.service_container_back').find('.service_back_item').slideDown(300);
-});
-
-$('.service').on('mouseleave', function() {
-  $(this).find('.service_container').show();
-  $(this).find('.service_container_back').hide();
-  $(this).find('.service_container_back').find('.service_back_item').slideUp(100);
-});
-
-$('.service_ui').on('click', function() {
-  window.location.href = 'innovation.html';
-});
-
-$('.service_ic').on('click', function() {
-  window.location.href = 'coaching.html';
-});
-
-$('.service_rp').on('click', function() {
-  window.location.href = 'prototyping.html';
-});
-
-// $('.get_quote').on('mouseenter', function() {
-//   console.log('ads');
-//   $('.get_quote').addClass('get_quote_active');
-// });
