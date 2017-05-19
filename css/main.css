@@ -330,6 +330,10 @@ textarea {
   overflow: hidden;
 }
 
+.header .menu:hover {
+  background-color: #ccc;
+}
+
 .logo_can {
   float: left;
   padding: 10px;
@@ -461,13 +465,18 @@ textarea {
   list-style-type: none;
 }
 
-.ul_links > li {
-  color: #54C2E8;
+.ul_links li {
   padding: 5px 0;
+  color: #ccc;
+  font-family: "Roboto";
+}
+
+.ul_links li a {
+  color: #54C2E8;
   cursor: pointer;
 }
 
-.ul_links > li:hover {
+.ul_links li a:hover {
   text-decoration: underline;
 }
 

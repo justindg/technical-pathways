@@ -3,17 +3,30 @@ $('.pathway_analytics').on('click', function() {
   window.open(url, '_self');
 });
 
+$('.pathway_architecture').on('click', function() {
+  var url = "architecture.html";
+  window.open(url, '_self');
+});
+
+$('.pathway_cyber').on('click', function() {
+  var url = "cyber.html";
+  window.open(url, '_self');
+});
+
 $('.pathway_engineering').on('click', function() {
   var url = "engineering.html";
   window.open(url, '_self');
 });
 
 $('.tree_home > .col > .role').on('click', function() {
-  $('.modal-home').show();
+  $('.modal-home').fadeIn(200);
+
+  var role = $(this).find('.label').text();
+  $('.modal-home > .modal > .content > .title').text(role);
 });
 
 $('.icon_close').on('click', function() {
-  $('.modal').hide();
+  $('.modal').parent().hide();
 });
 
 $('.value').on('click', function() {
@@ -42,7 +55,7 @@ $('.pillar').on('click', function() {
 });
 
 $('.faq-button').on('click', function() {
-  $('.modal-faq').show();
+  $('.modal-faq').fadeIn(200);
 });
 
 $('.faq-q').on('click', function() {
