@@ -9,7 +9,7 @@ $('.pathway_engineering').on('click', function() {
 });
 
 $('.tree_home > .col > .role').on('click', function() {
-  $('.modal').show();
+  $('.modal-home').show();
 });
 
 $('.icon_close').on('click', function() {
@@ -38,5 +38,19 @@ $('.pillar').on('click', function() {
     $('.pillar_title').text('Infrastructure Engineering');
   } else if ($(this).hasClass('pillar_software')) {
     $('.pillar_title').text('Software Engineering');
+  }
+});
+
+$('.faq-button').on('click', function() {
+  $('.modal-faq').show();
+});
+
+$('.faq-q').on('click', function() {
+  $('.faq-a').hide();
+  var thisA = $(this).parent().find('.faq-a');
+  if (thisA.is(':hidden')) {
+    thisA.show();
+  } else {
+    thisA.hide();
   }
 });

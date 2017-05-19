@@ -37,7 +37,12 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  padding: 80px 30px 200px 30px;
+}
+
+.banner_overlay {
+  background-color: rgba(88,88,88,0.4);
+  overflow: auto;
+  padding: 100px 80px 120px 80px;
   box-sizing: border-box;
 }
 
@@ -51,8 +56,9 @@
 .banner_title2 {
   width: 60%;
   color: white;
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: 1.5em;
+  margin-top: 10px;
   font-family: "RobotoLight", "Arial", sans-serif;
 }
 
@@ -72,10 +78,7 @@
   bottom: 30px;
 }
 
-
-
 .pathways {
-  font-family: "ProximaNovaBold", sans-serif;
   padding: 0 20px;
   text-align: center;
   overflow: auto;
@@ -106,7 +109,7 @@
 }
 
 .pathway .title {
-  font-family: "RobotoLight";
+  font-family: "Roboto";
   padding: 10px;
   overflow: auto;
 }
@@ -188,6 +191,7 @@
 }
 
 .value_container {
+  font-size: 1.3em;
   font-family: "Aachen";
   background-color: #FFCC00;
   padding: 12px 10px 10px 10px;
@@ -215,19 +219,45 @@
   color: white;
 }
 
+.modal-faq {
+  display: none;
+}
+
+.faq-button {
+  padding: 20px;
+  cursor: pointer;
+}
+
+.faq-button:hover {
+  color: #54C2E8;
+}
+
 .faq {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .faq > div {
   text-align: left;
+
 }
 
 .faq-q {
   font-family: "Roboto";
+  padding: 15px 15px;
+  background-color: #ddd;
+  cursor: pointer;
 }
 
 .faq-a {
-  margin-top: 5px;
+  font-family: "RobotoLight";
+  display: none;
+  padding: 15px 15px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.faq-a p {
+  margin-top: 0;
   margin-bottom: 20px;
 }

@@ -43,7 +43,7 @@ html {
 body {
   background-color: #fff;
   padding: 0px 24px;
-  width: 1200px;
+  width: 1366px;
   margin: 0 auto;
 }
 
@@ -362,7 +362,7 @@ textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  /*padding: 20px;*/
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.9);
 }
@@ -371,7 +371,7 @@ textarea {
   width: inherit;
   height: inherit;
   overflow: auto;
-  padding: 20px;
+  /*padding: 20px;*/
   box-sizing: border-box;
   background-color: red;
   z-index: 3;
@@ -385,13 +385,14 @@ textarea {
   z-index: 2;
   position: relative;
   padding: 30px 30px 30px 30px;
+  margin: 0 auto;
   box-sizing: border-box;
   align-self: center;
   position: fixed;
   height: 90%;
   width: 95%;
   background-color: white;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .modal .content .close {
@@ -419,10 +420,15 @@ textarea {
 
 .modal .content .description {
   font-family: "RobotoLight";
+  overflow: auto;
+  height: 90%;
+  margin-top: 10px;
 }
 
 .modal .content .description .purpose {
   width: 80%;
+  /*overflow: auto;
+  height: 20%;*/
   float: left;
   border-right: 1px solid #ccc;
   box-sizing: border-box;
@@ -490,7 +496,7 @@ textarea {
 .path_label > div {
   background-color: #eee;
   padding: 10px 0 10px 0;
-  font-family: "RobotoThin";
+  font-family: "RobotoLight";
 }
 
 .role_spacer {
@@ -534,7 +540,7 @@ textarea {
   float: left;
   padding: 15px 10px;
   box-sizing: border-box;
-  font-family: "RobotoLight";
+  font-family: "Roboto";
 }
 
 .role .icon {
@@ -587,7 +593,7 @@ textarea {
 
 .circle > div {
   align-self: center;
-  font-family: "RobotoLight";
+  font-family: "Roboto";
 }
 
 .top_spacer {
