@@ -360,6 +360,7 @@ textarea {
 
 .modal {
   position: fixed;
+  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   top: 0;
