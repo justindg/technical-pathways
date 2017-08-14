@@ -192,7 +192,8 @@
 
 .value_container {
   font-size: 1.3em;
-  font-family: "Aachen";
+  font-family: "AachenBoldPlain";
+  word-wrap: break-word;
   background-color: #FFCC00;
   padding: 12px 10px 10px 10px;
   box-sizing: border-box;
@@ -213,9 +214,9 @@
 
 .footer {
   text-align: right;
-  padding: 30px 20px;
-  background-color: #555;
-  font-family: "ProximaNovaBold", sans-serif;
+  padding: 40px 20px;
+  background-color: #ddd;
+  font-family: "Proxima", sans-serif;
   color: white;
 }
 
@@ -261,4 +262,47 @@
 .faq-a p {
   margin-top: 0;
   margin-bottom: 20px;
+}
+
+.pillars {
+  overflow: auto;
+  padding: 30px 150px;
+  box-sizing: border-box;
+}
+
+.pillar {
+  width: 22%;
+  float: left;
+  padding: 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+  box-shadow: 0 2px 5px grey;
+  font-family: "Roboto";
+}
+
+.pillar_spacer {
+  width: 4%;
+  height: 50px;
+  float: left;
+}
+
+.pillar:hover {
+  background-color: #FFCC00;
+}
+
+.pillar_active {
+  background-color: #FFCC00;
+}
+
+.pillar .icon {
+  /*float: left;*/
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.pillar .title {
+  text-align: center;
+}
+
+.pillar .title > div {
 }
