@@ -486,6 +486,7 @@ textarea {
 
 .role {
   cursor: pointer;
+  font-family: "Roboto";
 }
 
 .role .label {
@@ -612,4 +613,5 @@ textarea {
 .td-text {
   width: 70%;
   padding: 0px 10px;
+  font-family: "Roboto";
 }
