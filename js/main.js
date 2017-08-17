@@ -266,9 +266,9 @@ var generic = {
     ],
     competency: [
       "Demonstrates outstanding competency in core technology and practices across substantial strategic assets and practices at the platform level.",
-      "Demonstrates advanced to outstanding competency in adjacent and/or underlying technology and practices",
-      "Utilises and makes contribution to industry resources and practices",
-      "Seen as an expert by industry standards",
+      "Demonstrates advanced to outstanding competency in adjacent and/or underlying technology and practices.",
+      "Utilises and makes contribution to industry resources and practices.",
+      "Seen as an expert by industry standards.",
     ],
     delivery: [
       "Independently undertakes highly complex tasks and will take on the most difficult aspects.",
