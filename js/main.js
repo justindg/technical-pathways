@@ -78,7 +78,8 @@ var engineering = {
 }
 
 $('.pathway').on('click', function() {
-  $("html, body").animate({ scrollTop: $('.pillar_title').offset().top }, 500);
+  $('html, body').animate({ scrollTop: 550 }, 500);
+  $("#s4-workspace").animate({ scrollTop: 550 }, 500);
 
   if ($(this).hasClass('pathway_devops')) {
     $('.pillar_title').text(engineering.devops.title);
@@ -148,27 +149,52 @@ $('.faq-q').on('click', function() {
 var path = window.location.pathname;
 
 var devopsPdf = {
-  role_tech_1: path + "/pdf/DO Executive Consultant.pdf",
-  role_tech_2: "/pdf/DO Principal Engineer.pdf",
-  role_tech_3: "/pdf/DO Domain Engineer.pdf",
-  role_manager_1: "/pdf/DO Executive Consultant.pdf",
-  role_manager_2: "/pdf/DO Continuous Delivery Manager.pdf",
-  role_manager_3: "/pdf/DO Technical Delivery Lead.pdf",
-  role_1: "/pdf/DO Senior Engineer.pdf",
-  role_2: "/pdf/DO Engineer.pdf",
-  role_3: "/pdf/DO Grad Assoc Engineer.pdf",
+  role_tech_1: path + "/Documents/DO Executive Consultant.pdf",
+  role_tech_2: path + "/Documents/DO Principal Engineer.pdf",
+  role_tech_3: path + "/Documents/DO Domain Engineer.pdf",
+  role_manager_1: path + "/Documents/DO Executive Manager.pdf",
+  role_manager_2: path + "/Documents/DO Continuous Delivery Manager.pdf",
+  role_manager_3: path + "/Documents/DO Technical Delivery Lead.pdf",
+  role_1: path + "/Documents/DO Senior Engineer.pdf",
+  role_2: path + "/Documents/DO Engineer.pdf",
+  role_3: path + "/Documents/DO Grad Assoc Engineer.pdf",
+  extra: path + "/Documents/DO Specialist Engineer.pdf"
 }
 
 var infraPdf = {
-  role_tech_1: "../pdf/IS Executive Engineer.pdf",
-  role_tech_2: "../pdf/IS Principal Engineer.pdf",
-  role_tech_3: "../pdf/IS Specialist Engineer.pdf",
-  role_manager_1: "../pdf/IS EM Engineering.pdf",
-  role_manager_2: "../pdf/IS Senior Manager Engineering.pdf",
-  role_manager_3: "../pdf/IS Manager Engineering.pdf",
-  role_1: "../pdf/IS Senior Engineer.pdf",
-  role_2: "../pdf/IS Engineer.pdf",
-  role_3: "../pdf/IS GradAssoc Engineer.pdf",
+  role_tech_1: path + "/Documents/IS Executive Engineer.pdf",
+  role_tech_2: path + "/Documents/IS Principal Engineer.pdf",
+  role_tech_3: path + "/Documents/IS Specialist Engineer.pdf",
+  role_manager_1: path + "/Documents/IS EM Engineering.pdf",
+  role_manager_2: path + "/Documents/IS Senior Manager Engineering.pdf",
+  role_manager_3: path + "/Documents/IS Manager Engineering.pdf",
+  role_1: path + "/Documents/IS Senior Engineer.pdf",
+  role_2: path + "/Documents/IS Engineer.pdf",
+  role_3: path + "/Documents/IS GradAssoc Engineer.pdf",
+}
+
+var softwarePdf = {
+  role_tech_1: path + "/Documents/SE Chief.pdf",
+  role_tech_2: path + "/Documents/SE Principal.pdf",
+  role_tech_3: path + "/Documents/SE Specialist.pdf",
+  role_manager_1: path + "/Documents/SE Executive Manager.pdf",
+  role_manager_2: path + "/Documents/Technical Manager SE.pdf",
+  role_manager_3: path + "/Documents/SE Lead.pdf",
+  role_1: path + "/Documents/SE Senior.pdf",
+  role_2: path + "/Documents/SE.pdf",
+  role_3: path + "/Documents/Graduate or Associate SE.pdf",
+}
+
+var systemsPdf = {
+  role_tech_1: path + "/Documents/SE Chief.pdf",
+  role_tech_2: path + "/Documents/SE Principal.pdf",
+  role_tech_3: path + "/Documents/SE Specialist.pdf",
+  role_manager_1: path + "/Documents/SE Executive Manager.pdf",
+  role_manager_2: path + "/Documents/Technical Manager SE.pdf",
+  role_manager_3: path + "/Documents/SE Lead.pdf",
+  role_1: path + "/Documents/SE Senior.pdf",
+  role_2: path + "/Documents/SE.pdf",
+  role_3: path + "/Documents/Graduate or Associate SE.pdf",
 }
 
 var role_tech_1 = $('.role_tech_1');
@@ -176,21 +202,142 @@ role_tech_1.on('click', function() {
   var role = $(this).find('.role').text();
   if (role === engineering.devops.role_tech_1) {
     window.open(devopsPdf.role_tech_1, '_blank');
-  } else if (role === engineering.devlops.role_tech_2) {
-    window.open(devopsPdf.role_tech_2, '_blank');
-  } else if (role === engineering.devlops.role_tech_3) {
+  } else if (role === engineering.infra.role_tech_1) {
+    window.open(infraPdf.role_tech_1, '_blank');
+  } else if (role === engineering.software.role_tech_1) {
+    window.open(software.role_tech_1, '_blank');
+  } else if (role === engineering.systems.role_tech_1) {
+    window.open(systems.role_tech_1, '_blank');
+  } else if (role === engineering.generic.role_tech_1) {
+    // open modal for generic descriptions
+  }
+});
+
+var role_tech_2 = $('.role_tech_2');
+role_tech_1.on('click', function() {
+  var role = $(this).find('.role').text();
+  if (role === engineering.devops.role_tech_1) {
+    window.open(devopsPdf.role_tech_1, '_blank');
+  } else if (role === engineering.infra.role_tech_1) {
+    window.open(infraPdf.role_tech_1, '_blank');
+  } else if (role === engineering.software.role_tech_1) {
+    window.open(software.role_tech_1, '_blank');
+  } else if (role === engineering.systems.role_tech_1) {
+    window.open(systems.role_tech_1, '_blank');
+  } else if (role === engineering.generic.role_tech_1) {
+    // open modal for generic descriptions
+  }
+});
+
+var role_tech_3 = $('.role_tech_3');
+role_tech_3.on('click', function() {
+  var role = $(this).find('.role').text();
+  if (role === engineering.devops.role_tech_3) {
     window.open(devopsPdf.role_tech_3, '_blank');
-  } else if (role === engineering.devlops.role_manager_1) {
+    window.open(devopsPdf.extra, '_blank');
+  } else if (role === engineering.infra.role_tech_3) {
+    window.open(infraPdf.role_tech_3, '_blank');
+  } else if (role === engineering.software.role_tech_3) {
+    window.open(software.role_tech_3, '_blank');
+  } else if (role === engineering.systems.role_tech_3) {
+    window.open(systems.role_tech_3, '_blank');
+  } else if (role === engineering.generic.role_tech_3) {
+    // open modal for generic descriptions
+  }
+});
+
+var role_manager_1 = $('.role_manager_1');
+role_manager_1.on('click', function() {
+  var role = $(this).find('.role').text();
+  if (role === engineering.devops.role_manager_1) {
     window.open(devopsPdf.role_manager_1, '_blank');
-  } else if (role === engineering.devlops.role_manager_2) {
+  } else if (role === engineering.infra.role_manager_1) {
+    window.open(infraPdf.role_manager_1, '_blank');
+  } else if (role === engineering.software.role_manager_1) {
+    window.open(software.role_manager_1, '_blank');
+  } else if (role === engineering.systems.role_manager_1) {
+    window.open(systems.role_manager_1, '_blank');
+  } else if (role === engineering.generic.role_manager_1) {
+    // open modal for generic descriptions
+  }
+});
+
+var role_manager_2 = $('.role_manager_2');
+role_manager_2.on('click', function() {
+  var role = $(this).find('.role').text();
+  if (role === engineering.devops.role_manager_2) {
     window.open(devopsPdf.role_manager_2, '_blank');
-  } else if (role === engineering.devlops.role_manager_3) {
+  } else if (role === engineering.infra.role_manager_2) {
+    window.open(infraPdf.role_manager_2, '_blank');
+  } else if (role === engineering.software.role_manager_2) {
+    window.open(software.role_manager_2, '_blank');
+  } else if (role === engineering.systems.role_manager_2) {
+    window.open(systems.role_manager_2, '_blank');
+  } else if (role === engineering.generic.role_manager_2) {
+    // open modal for generic descriptions
+  }
+});
+
+var role_manager_3 = $('.role_manager_3');
+role_manager_3.on('click', function() {
+  var role = $(this).find('.role').text();
+  if (role === engineering.devops.role_manager_3) {
     window.open(devopsPdf.role_manager_3, '_blank');
-  } else if (role === engineering.devlops.role_1) {
+  } else if (role === engineering.infra.role_manager_3) {
+    window.open(infraPdf.role_manager_3, '_blank');
+  } else if (role === engineering.software.role_manager_3) {
+    window.open(software.role_manager_3, '_blank');
+  } else if (role === engineering.systems.role_manager_3) {
+    window.open(systems.role_manager_3, '_blank');
+  } else if (role === engineering.generic.role_manager_3) {
+    // open modal for generic descriptions
+  }
+});
+
+var role_1 = $('.role_1');
+role_1.on('click', function() {
+  var role = $(this).find('.role').text();
+  if (role === engineering.devops.role_1) {
     window.open(devopsPdf.role_1, '_blank');
-  } else if (role === engineering.devlops.role_2) {
+  } else if (role === engineering.infra.role_1) {
+    window.open(infraPdf.role_1, '_blank');
+  } else if (role === engineering.software.role_1) {
+    window.open(software.role_1, '_blank');
+  } else if (role === engineering.systems.role_1) {
+    window.open(systems.role_1, '_blank');
+  } else if (role === engineering.generic.role_1) {
+    // open modal for generic descriptions
+  }
+});
+
+var role_2 = $('.role_2');
+role_2.on('click', function() {
+  var role = $(this).find('.role').text();
+  if (role === engineering.devops.role_2) {
     window.open(devopsPdf.role_2, '_blank');
-  } else if (role === engineering.devlops.role_3) {
+  } else if (role === engineering.infra.role_2) {
+    window.open(infraPdf.role_2, '_blank');
+  } else if (role === engineering.software.role_2) {
+    window.open(software.role_2, '_blank');
+  } else if (role === engineering.systems.role_2) {
+    window.open(systems.role_2, '_blank');
+  } else if (role === engineering.generic.role_2) {
+    // open modal for generic descriptions
+  }
+});
+
+var role_3 = $('.role_3');
+role_3.on('click', function() {
+  var role = $(this).find('.role').text();
+  if (role === engineering.devops.role_3) {
     window.open(devopsPdf.role_3, '_blank');
+  } else if (role === engineering.infra.role_3) {
+    window.open(infraPdf.role_3, '_blank');
+  } else if (role === engineering.software.role_3) {
+    window.open(software.role_3, '_blank');
+  } else if (role === engineering.systems.role_3) {
+    window.open(systems.role_3, '_blank');
+  } else if (role === engineering.generic.role_3) {
+    // open modal for generic descriptions
   }
 });
