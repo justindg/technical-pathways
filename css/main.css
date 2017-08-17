@@ -358,7 +358,6 @@ textarea {
   padding: 0 12%;
 }
 
-/* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -372,23 +371,30 @@ textarea {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
 .modal-content {
   overflow: auto;
     background-color: #fefefe;
-    margin: auto; /* 15% from the top and centered */
-    padding: 20px;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 15px;
     border: 1px solid #888;
-    height: 80%;
+    /*height: 80%;*/
     width: 80%; /* Could be more or less, depending on screen size */
 }
 
-/* The Close Button */
+.modal-title {
+  font-family: "Roboto";
+  font-size: 1.2em;
+}
+
+.icon_close {
+  float: right;
+}
+
 .close {
     color: #aaa;
     float: right;
-    font-size: 28px;
     font-weight: bold;
+    overflow: auto;
 }
 
 .close:hover,
@@ -397,100 +403,6 @@ textarea {
     text-decoration: none;
     cursor: pointer;
 }
-
-/*.modal-faq {
-  display: none;
-}
-
-.modal {
-  position: fixed;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal-border {
-  width: inherit;
-  height: inherit;
-  overflow: auto;
-  box-sizing: border-box;
-  background-color: red;
-  z-index: 3;
-}
-
-.modal-home {
-  display: none;
-}
-
-.modal .content {
-  z-index: 2;
-  position: relative;
-  padding: 30px 30px 30px 30px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  align-self: center;
-  position: fixed;
-  height: 90%;
-  width: 95%;
-  background-color: white;
-  overflow: hidden;
-}
-
-.modal .content .close {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  text-align: right;
-  color: black;
-  cursor: pointer;
-}
-
-.modal .content .title {
-  font-family: "Roboto";
-  font-size: 1.5em;
-  color: #54C2E8;
-}
-
-.modal .content .focus {
-
-}
-
-.modal .content .video {
-  margin: 10px 0;
-}
-
-.modal .content .description {
-  font-family: "RobotoLight";
-  overflow: auto;
-  height: 90%;
-  margin-top: 10px;
-}
-
-.modal .content .description .purpose {
-  width: 80%;
-  float: left;
-  border-right: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-.modal .content .description .purpose .heading {
-  font-size: 1.2em;
-  margin: 10px 0 10px 0;
-  font-family: "Roboto";
-}
-
-.modal .content .description .links {
-  width: 20%;
-  float: left;
-  padding: 10px 10px 0 10px;
-  box-sizing: border-box;
-}*/
 
 .key_responsibilities {
   padding-left: 20px;

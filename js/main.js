@@ -8,7 +8,7 @@
 $('.faq-button').on('click', function() {
   // $('.modal-faq').fadeIn(200);
   var modal = document.getElementById('faq');
-  modal.style.display = "block"
+  modal.style.display = "block";
 });
 
 $('.faq-q').on('click', function() {
@@ -21,9 +21,15 @@ $('.faq-q').on('click', function() {
   }
 });
 
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 $('.icon_close').on('click', function() {
-  $('.modal').parent().hide();
+  var modal = document.getElementById('faq');
+  modal.style.display = "none";
 });
 
 var engineering = {
