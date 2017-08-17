@@ -22,6 +22,7 @@ $('.faq-q').on('click', function() {
 });
 
 window.onclick = function(event) {
+  var modal = document.getElementById('faq');
     if (event.target == modal) {
         modal.style.display = "none";
     }

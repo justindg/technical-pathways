@@ -109,9 +109,10 @@
 }
 
 .pathway .title {
-  font-family: "Roboto";
+  font-family: "RobotoLight";
   padding: 10px;
   overflow: auto;
+  text-align: left;
 }
 
 .pathway .text {
@@ -124,12 +125,13 @@
 }
 
 .pathway .more {
+  font-family: "RobotoLight";
   clear: both;
   text-align: left;
   font-size: 0.8em;
   margin-top: 20px;
   padding: 10px;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
   color: #0096D6;
 }
 
