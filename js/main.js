@@ -22,19 +22,38 @@ $('.faq-q').on('click', function() {
 });
 
 window.onclick = function(event) {
-  var modal = document.getElementById('faq');
-    if (event.target == modal) {
-        modal.style.display = "none";
+  var faq = document.getElementById('faq');
+  var generic = document.getElementById('generic');
+    if (event.target == faq) {
+      faq.style.display = "none";
+    } else if (event.target == generic) {
+      generic.style.display = "none";
     }
 }
 
 $('.icon_close').on('click', function() {
-  var modal = document.getElementById('faq');
+  var modal = document.getElementById('faq')
+  var generic = document.getElementById('generic');;
   modal.style.display = "none";
+  generic.style.display = "none";
 });
+
+var banner = {
+  generic: {
+    back: false,
+    banner_title1: "Technical Pathways",
+    banner_title2: "As we continue to evolve from a bank to a digitally enabled organisation, deep technical skills are critical to our success and so we have designed an alternative path where employees are recognised and rewarded for technical leadership, providing them with a clear path for advancement, alongside the traditional people leadership career pathway."
+  },
+  engineering: {
+    back: true,
+    banner_title1: "Engineering",
+    banner_title2: ""
+  }
+}
 
 var engineering = {
   generic: {
+    active: true,
     title: "Technical Pathway Framework",
     description: "The technical pathway is a framework to help support career progression and recognition for both people leaders and more technically focussed individuals. It is not prescriptive but can help you understand how your current skills or role align to other roles within the framework and what you may need to develop to progress or change role.",
     role_tech_1: "Executive Consultant",
@@ -48,6 +67,7 @@ var engineering = {
     role_3: "Graduate"
   },
   devops: {
+    active: false,
     title: "DevOps Engineering",
     description: "These roles work with development and operations communities to drive velocity and quality of software delivered. DevOps engineers are technical, collaborative, communicative, and enjoy finding efficiencies and therefore are always looking to automate and monitor the process of software integration, testing, deployment, and infrastructure changes.",
     role_tech_1: "Executive Consultant",
@@ -61,6 +81,7 @@ var engineering = {
     role_3: "Graduate / Associate Engineer"
   },
   infra: {
+    active: false,
     title: "Infrastructure Engineering",
     description: "These roles collaborate closely with the business to create fit-for-purpose IT infrastructure services that supports the business in its goals. Infrastructure engineers are customer focussed, logical and rational. They apply broad breadth and depth of knowledge to understand requirements, translate metrics into meaningful insights and cohesively integrate IT services. They have specialised knowledge across various technology domains including enterprise data centres, networking, compute hosting, databases, storage, cloud-based services and software defined environments.",
     role_tech_1: "Executive Engineer",
@@ -74,6 +95,7 @@ var engineering = {
     role_3: "Graduate / Associate Engineer"
   },
   software: {
+    active: false,
     title: "Software Engineering",
     description: "The software engineering roles focus on the delivery of outstanding customer experiences through innovative, well designed and engineered solutions. Software Engineers care deeply and become experts in the full lifecycle of software development. They develop extensive skills and experience not only in languages and frameworks, but also in the underlying and supporting disciplines to design, build, deploy and maintain high-quality, resilient software that is critical to the success of CBA and expected by our customers.",
     role_tech_1: "Chief Engineer",
@@ -87,6 +109,7 @@ var engineering = {
     role_3: "Graduate / Associate Software Engineer"
   },
   systems: {
+    active: false,
     title: "Systems Engineering",
     description: "Lorem ipsum dolor sit amet",
     role_tech_1: "Systems T1",
@@ -101,11 +124,33 @@ var engineering = {
   }
 }
 
+$('.banner_back').on('click', function() {
+  setAllInactive();
+  engineering.generic.active = true;
+  $('.banner_title1').text(banner.generic.banner_title1);
+  $('.banner_title2').text(banner.generic.banner_title2);
+  $('.banner_back').hide();
+});
+
+var setAllInactive = function() {
+  engineering.generic.active = false;
+  engineering.devops.active = false;
+  engineering.infra.active = false;
+  engineering.software.active = false;
+  engineering.systems.active = false;
+}
+
 $('.pathway').on('click', function() {
-  $('html, body').animate({ scrollTop: 550 }, 500);
-  $("#s4-workspace").animate({ scrollTop: 550 }, 500);
+  $('html, body').animate({ scrollTop: 0 }, 500);
+  $("#s4-workspace").animate({ scrollTop: 0 }, 500);
+
+  $('.banner_title1').text(banner.engineering.banner_title1);
+  $('.banner_title2').text(banner.engineering.banner_title2);
+  $('.banner_back').show();
 
   if ($(this).hasClass('pathway_devops')) {
+    setAllInactive();
+    engineering.devops.active = true;
     $('.pillar_title').text(engineering.devops.title);
     $('.pillar_description').text(engineering.devops.description);
     $('.role_tech_1 > .role').text(engineering.devops.role_tech_1);
@@ -118,6 +163,8 @@ $('.pathway').on('click', function() {
     $('.role_2 > .role').text(engineering.devops.role_2);
     $('.role_3 > .role').text(engineering.devops.role_3);
   } else if ($(this).hasClass('pathway_infra')) {
+    setAllInactive();
+    engineering.infra.active = true;
     $('.pillar_title').text(engineering.infra.title);
     $('.pillar_description').text(engineering.infra.description);
     $('.role_tech_1 > .role').text(engineering.infra.role_tech_1);
@@ -130,6 +177,8 @@ $('.pathway').on('click', function() {
     $('.role_2 > .role').text(engineering.infra.role_2);
     $('.role_3 > .role').text(engineering.infra.role_3);
   } else if ($(this).hasClass('pathway_software')) {
+    setAllInactive();
+    engineering.software.active = true;
     $('.pillar_title').text(engineering.software.title);
     $('.pillar_description').text(engineering.software.description);
     $('.role_tech_1 > .role').text(engineering.software.role_tech_1);
@@ -142,6 +191,8 @@ $('.pathway').on('click', function() {
     $('.role_2 > .role').text(engineering.software.role_2);
     $('.role_3 > .role').text(engineering.software.role_3);
   } else if ($(this).hasClass('pathway_systems')) {
+    setAllInactive();
+    engineering.systems.active = true;
     $('.pillar_title').text(engineering.systems.title);
     $('.pillar_description').text(engineering.systems.description);
     $('.role_tech_1 > .role').text(engineering.systems.role_tech_1);
@@ -207,34 +258,139 @@ var systemsPdf = {
   role_3: path + "/Documents/Graduate or Associate SE.pdf",
 }
 
+var generic = {
+  role_tech_1: {
+    name: "Executive Consultant",
+    nutshell: [
+      "Outstanding capability and impact. Overall technical accountability for a platform's technology."
+    ],
+    competency: [
+      "Demonstrates outstanding competency in core technology and practices across substantial strategic assets and practices at the platform level.",
+      "Demonstrates advanced to outstanding competency in adjacent and/or underlying technology and practices",
+      "Utilises and makes contribution to industry resources and practices",
+      "Seen as an expert by industry standards",
+    ],
+    delivery: [
+      "Independently undertakes highly complex tasks and will take on the most difficult aspects.",
+      "Oversees and supports delivery by all consultants in platform, providing expert and strategic guidance.",
+      "Major contribution to complex delivery planning with expert advice.",
+      "Demonstrates innovation through concrete application of technical skills to complex business problems. ",
+    ],
+    personal: [
+      "Maintains core capabilities and domain knowledge at an outstanding level.",
+      "Continuous development in areas relating to asset and practice accountability, utilising a wide range of internal and external resources.",
+    ],
+    practice: [
+      "Accountable for strategic development of all practices within remit",
+      "Leads cross team/platform practice activities"
+    ],
+    strategy: [
+      "Strong understanding of the broader business and technical context and long term impacts of technology, actively identifies and addresses operational concerns, long term sustainability, etc.",
+      "Accountable for strategy pertaining to all technical assets within remit.",
+      "Informs strategy through cutting edge research and industry best practice knowledge."
+    ],
+    accountability: [
+      "Accountable for platform level technical assets"
+    ],
+    leadership: [
+      "Technical leadership across a platform and contribution to the group level",
+      "Team member and mentor/support for more junior consultants"
+    ],
+    team: []
+  },
+  role_tech_2: {
+    name: "Principal Consultant",
+    nutshell: "",
+    competency: "",
+    delivery: "",
+    personal: "",
+    practice: "",
+    strategy: "",
+    accountability: "",
+    leadership: "",
+    team: ""
+  },
+  role_tech_3: {
+    name: "Specialist Consultant",
+    nutshell: "",
+    competency: "",
+    delivery: "",
+    personal: "",
+    practice: "",
+    strategy: "",
+    accountability: "",
+    leadership: "",
+    team: ""
+  },
+  role_manager_1: {
+    name: "Executive Manager",
+    nutshell: "",
+    competency: "",
+    delivery: "",
+    personal: "",
+    practice: "",
+    strategy: "",
+    accountability: "",
+    leadership: "",
+    team: ""
+  },
+  role_manager_2: {
+    name: "Senior Manager",
+    nutshell: "",
+    competency: "",
+    delivery: "",
+    personal: "",
+    practice: "",
+    strategy: "",
+    accountability: "",
+    leadership: "",
+    team: ""
+  },
+  role_manager_3: {
+    name: "Manager",
+    nutshell: "",
+    competency: "",
+    delivery: "",
+    personal: "",
+    practice: "",
+    strategy: "",
+    accountability: "",
+    leadership: "",
+    team: ""
+  },
+}
+
 var role_tech_1 = $('.role_tech_1');
 role_tech_1.on('click', function() {
   var role = $(this).find('.role').text();
-  if (role === engineering.devops.role_tech_1) {
+  console.log(role);
+  console.log(engineering.generic.role_tech_1);
+  if (engineering.devops.active && role === engineering.devops.role_tech_1) {
     window.open(devopsPdf.role_tech_1, '_blank');
-  } else if (role === engineering.infra.role_tech_1) {
+  } else if (engineering.infra.active && role === engineering.infra.role_tech_1) {
     window.open(infraPdf.role_tech_1, '_blank');
-  } else if (role === engineering.software.role_tech_1) {
+  } else if (engineering.software.active && role === engineering.software.role_tech_1) {
     window.open(software.role_tech_1, '_blank');
-  } else if (role === engineering.systems.role_tech_1) {
+  } else if (engineering.systems.active && role === engineering.systems.role_tech_1) {
     window.open(systems.role_tech_1, '_blank');
-  } else if (role === engineering.generic.role_tech_1) {
-    // open modal for generic descriptions
+  } else if (engineering.generic.active && role === engineering.generic.role_tech_1) {
+    var generic = document.getElementById('generic');
+    generic.style.display = "block";
   }
 });
 
 var role_tech_2 = $('.role_tech_2');
-role_tech_1.on('click', function() {
+role_tech_2.on('click', function() {
   var role = $(this).find('.role').text();
-  if (role === engineering.devops.role_tech_1) {
-    window.open(devopsPdf.role_tech_1, '_blank');
-  } else if (role === engineering.infra.role_tech_1) {
-    window.open(infraPdf.role_tech_1, '_blank');
-  } else if (role === engineering.software.role_tech_1) {
-    window.open(software.role_tech_1, '_blank');
-  } else if (role === engineering.systems.role_tech_1) {
-    window.open(systems.role_tech_1, '_blank');
-  } else if (role === engineering.generic.role_tech_1) {
+  if (engineering.devops.active && role === engineering.devops.role_tech_2) {
+    window.open(devopsPdf.role_tech_2, '_blank');
+  } else if (engineering.infra.active && role === engineering.infra.role_tech_2) {
+    window.open(infraPdf.role_tech_2, '_blank');
+  } else if (engineering.software.active && role === engineering.software.role_tech_2) {
+    window.open(software.role_tech_2, '_blank');
+  } else if (engineering.systems.active && role === engineering.systems.role_tech_2) {
+    window.open(systems.role_tech_2, '_blank');
+  } else if (engineering.generic.active && role === engineering.generic.role_tech_2) {
     // open modal for generic descriptions
   }
 });
@@ -242,16 +398,16 @@ role_tech_1.on('click', function() {
 var role_tech_3 = $('.role_tech_3');
 role_tech_3.on('click', function() {
   var role = $(this).find('.role').text();
-  if (role === engineering.devops.role_tech_3) {
+  if (engineering.devops.active && role === engineering.devops.role_tech_3) {
     window.open(devopsPdf.role_tech_3, '_blank');
     window.open(devopsPdf.extra, '_blank');
-  } else if (role === engineering.infra.role_tech_3) {
+  } else if (engineering.infra.active && role === engineering.infra.role_tech_3) {
     window.open(infraPdf.role_tech_3, '_blank');
-  } else if (role === engineering.software.role_tech_3) {
+  } else if (engineering.software.active && role === engineering.software.role_tech_3) {
     window.open(software.role_tech_3, '_blank');
-  } else if (role === engineering.systems.role_tech_3) {
+  } else if (engineering.systems.active && role === engineering.systems.role_tech_3) {
     window.open(systems.role_tech_3, '_blank');
-  } else if (role === engineering.generic.role_tech_3) {
+  } else if (engineering.generic.active && role === engineering.generic.role_tech_3) {
     // open modal for generic descriptions
   }
 });
@@ -259,15 +415,15 @@ role_tech_3.on('click', function() {
 var role_manager_1 = $('.role_manager_1');
 role_manager_1.on('click', function() {
   var role = $(this).find('.role').text();
-  if (role === engineering.devops.role_manager_1) {
+  if (engineering.devops.active && role === engineering.devops.role_manager_1) {
     window.open(devopsPdf.role_manager_1, '_blank');
-  } else if (role === engineering.infra.role_manager_1) {
+  } else if (engineering.infra.active && role === engineering.infra.role_manager_1) {
     window.open(infraPdf.role_manager_1, '_blank');
-  } else if (role === engineering.software.role_manager_1) {
+  } else if (engineering.software.active && role === engineering.software.role_manager_1) {
     window.open(software.role_manager_1, '_blank');
-  } else if (role === engineering.systems.role_manager_1) {
+  } else if (engineering.systems.active && role === engineering.systems.role_manager_1) {
     window.open(systems.role_manager_1, '_blank');
-  } else if (role === engineering.generic.role_manager_1) {
+  } else if (engineering.generic.active && role === engineering.generic.role_manager_1) {
     // open modal for generic descriptions
   }
 });
@@ -275,15 +431,15 @@ role_manager_1.on('click', function() {
 var role_manager_2 = $('.role_manager_2');
 role_manager_2.on('click', function() {
   var role = $(this).find('.role').text();
-  if (role === engineering.devops.role_manager_2) {
+  if (engineering.devops.active && role === engineering.devops.role_manager_2) {
     window.open(devopsPdf.role_manager_2, '_blank');
-  } else if (role === engineering.infra.role_manager_2) {
+  } else if (engineering.infra.active && role === engineering.infra.role_manager_2) {
     window.open(infraPdf.role_manager_2, '_blank');
-  } else if (role === engineering.software.role_manager_2) {
+  } else if (engineering.software.active && role === engineering.software.role_manager_2) {
     window.open(software.role_manager_2, '_blank');
-  } else if (role === engineering.systems.role_manager_2) {
+  } else if (engineering.systems.active && role === engineering.systems.role_manager_2) {
     window.open(systems.role_manager_2, '_blank');
-  } else if (role === engineering.generic.role_manager_2) {
+  } else if (engineering.generic.active && role === engineering.generic.role_manager_2) {
     // open modal for generic descriptions
   }
 });
@@ -291,15 +447,15 @@ role_manager_2.on('click', function() {
 var role_manager_3 = $('.role_manager_3');
 role_manager_3.on('click', function() {
   var role = $(this).find('.role').text();
-  if (role === engineering.devops.role_manager_3) {
+  if (engineering.devops.active && role === engineering.devops.role_manager_3) {
     window.open(devopsPdf.role_manager_3, '_blank');
-  } else if (role === engineering.infra.role_manager_3) {
+  } else if (engineering.infra.active && role === engineering.infra.role_manager_3) {
     window.open(infraPdf.role_manager_3, '_blank');
-  } else if (role === engineering.software.role_manager_3) {
+  } else if (engineering.software.active && role === engineering.software.role_manager_3) {
     window.open(software.role_manager_3, '_blank');
-  } else if (role === engineering.systems.role_manager_3) {
+  } else if (engineering.systems.active && role === engineering.systems.role_manager_3) {
     window.open(systems.role_manager_3, '_blank');
-  } else if (role === engineering.generic.role_manager_3) {
+  } else if (engineering.generic.active && role === engineering.generic.role_manager_3) {
     // open modal for generic descriptions
   }
 });
@@ -307,15 +463,15 @@ role_manager_3.on('click', function() {
 var role_1 = $('.role_1');
 role_1.on('click', function() {
   var role = $(this).find('.role').text();
-  if (role === engineering.devops.role_1) {
+  if (engineering.devops.active && role === engineering.devops.role_1) {
     window.open(devopsPdf.role_1, '_blank');
-  } else if (role === engineering.infra.role_1) {
+  } else if (engineering.infra.active && role === engineering.infra.role_1) {
     window.open(infraPdf.role_1, '_blank');
-  } else if (role === engineering.software.role_1) {
+  } else if (engineering.software.active && role === engineering.software.role_1) {
     window.open(software.role_1, '_blank');
-  } else if (role === engineering.systems.role_1) {
+  } else if (engineering.systems.active && role === engineering.systems.role_1) {
     window.open(systems.role_1, '_blank');
-  } else if (role === engineering.generic.role_1) {
+  } else if (engineering.generic.active && role === engineering.generic.role_1) {
     // open modal for generic descriptions
   }
 });
@@ -323,15 +479,15 @@ role_1.on('click', function() {
 var role_2 = $('.role_2');
 role_2.on('click', function() {
   var role = $(this).find('.role').text();
-  if (role === engineering.devops.role_2) {
+  if (engineering.devops.active && role === engineering.devops.role_2) {
     window.open(devopsPdf.role_2, '_blank');
-  } else if (role === engineering.infra.role_2) {
+  } else if (engineering.infra.active && role === engineering.infra.role_2) {
     window.open(infraPdf.role_2, '_blank');
-  } else if (role === engineering.software.role_2) {
+  } else if (engineering.software.active && role === engineering.software.role_2) {
     window.open(software.role_2, '_blank');
-  } else if (role === engineering.systems.role_2) {
+  } else if (engineering.systems.active && role === engineering.systems.role_2) {
     window.open(systems.role_2, '_blank');
-  } else if (role === engineering.generic.role_2) {
+  } else if (engineering.generic.active && role === engineering.generic.role_2) {
     // open modal for generic descriptions
   }
 });
@@ -339,15 +495,15 @@ role_2.on('click', function() {
 var role_3 = $('.role_3');
 role_3.on('click', function() {
   var role = $(this).find('.role').text();
-  if (role === engineering.devops.role_3) {
+  if (engineering.devops.active && role === engineering.devops.role_3) {
     window.open(devopsPdf.role_3, '_blank');
-  } else if (role === engineering.infra.role_3) {
+  } else if (engineering.infra.active && role === engineering.infra.role_3) {
     window.open(infraPdf.role_3, '_blank');
-  } else if (role === engineering.software.role_3) {
+  } else if (engineering.software.active && role === engineering.software.role_3) {
     window.open(software.role_3, '_blank');
-  } else if (role === engineering.systems.role_3) {
+  } else if (engineering.systems.active && role === engineering.systems.role_3) {
     window.open(systems.role_3, '_blank');
-  } else if (role === engineering.generic.role_3) {
+  } else if (engineering.generic.active && role === engineering.generic.role_3) {
     // open modal for generic descriptions
   }
 });
