@@ -5,6 +5,23 @@
 //   $('.modal-home > .modal > .content > .title').text(role);
 // });
 
+$('.faq-button').on('click', function() {
+  // $('.modal-faq').fadeIn(200);
+  var modal = document.getElementById('faq');
+  modal.style.display = "block"
+});
+
+$('.faq-q').on('click', function() {
+  $('.faq-a').hide();
+  var thisA = $(this).parent().find('.faq-a');
+  if (thisA.is(':hidden')) {
+    thisA.show();
+  } else {
+    thisA.hide();
+  }
+});
+
+
 $('.icon_close').on('click', function() {
   $('.modal').parent().hide();
 });
@@ -129,20 +146,6 @@ $('.pathway').on('click', function() {
     $('.role_1 > .role').text(engineering.systems.role_1);
     $('.role_2 > .role').text(engineering.systems.role_2);
     $('.role_3 > .role').text(engineering.systems.role_3);
-  }
-});
-
-$('.faq-button').on('click', function() {
-  $('.modal-faq').fadeIn(200);
-});
-
-$('.faq-q').on('click', function() {
-  $('.faq-a').hide();
-  var thisA = $(this).parent().find('.faq-a');
-  if (thisA.is(':hidden')) {
-    thisA.show();
-  } else {
-    thisA.hide();
   }
 });
 
