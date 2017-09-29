@@ -651,7 +651,6 @@ textarea {
 }
 
 .label {
-  margin-top: 20px;
   padding: 10px 20px;
   font-family: "Roboto";
   background-color: #00A6DE;
@@ -660,7 +659,7 @@ textarea {
 
 .list {
   margin: 0;
-  padding: 0 20px;
+  padding: 0px 20px;
   list-style-type: none;
   font-size: 0.8em;
 }

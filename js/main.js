@@ -213,7 +213,7 @@ var devopsPdf = {
   role_tech_1: path + "/Documents/DO Executive Consultant.pdf",
   role_tech_2: path + "/Documents/DO Principal Engineer.pdf",
   role_tech_3: path + "/Documents/DO Domain Engineer.pdf",
-  role_manager_1: path + "/Documents/DO Executive Manager.pdf",
+  role_manager_1: path + "/Documents/IS EM Engineering.pdf",
   role_manager_2: path + "/Documents/DO Continuous Delivery Manager.pdf",
   role_manager_3: path + "/Documents/DO Technical Delivery Lead.pdf",
   role_1: path + "/Documents/DO Senior Engineer.pdf",
@@ -300,63 +300,194 @@ var generic = {
   },
   role_tech_2: {
     name: "Principal Consultant",
-    nutshell: "",
-    competency: "",
-    delivery: "",
-    personal: "",
-    practice: "",
-    strategy: "",
-    accountability: "",
-    leadership: "",
-    team: ""
+    nutshell: [
+      "Outstanding capability and impact. Responsibility for large scale areas of technology and practice."
+    ],
+    competency: [
+      "Demonstrates outstanding competency in core technology and practices across a wide remit.",
+      "Demonstrates advanced to outstanding competency in adjacent and/or underlying technology and practices.",
+      "Utilises and makes contribution to industry resources and practices.",
+      "Seen as an expert by industry standards.",
+    ],
+    delivery: [
+      "Independently undertakes moderately to highly complex tasks and will take on the most difficult aspects.",
+      "Oversees and supports delivery by consultants in areas of expertise providing expert and strategic guidance.",
+      "Major contribution to complex delivery planning with expert advice.",
+      "Demonstrates innovation through concrete application of technical skills to complex business problems.",
+    ],
+    personal: [
+      "Maintains core capabilities and domain knowledge at an outstanding level.",
+      "Continuous development in areas of specialist expertise, utilising a wide range of internal and external resources.",
+    ],
+    practice: [
+      "Leader and champion of strategic practice development within team/platform.",
+      "Leads cross team/platform practice activities."
+    ],
+    strategy: [
+      "Strong understanding of the broader business and technical context and long term impacts of technology, actively identifies and address operational concerns, long term sustainability, etc.",
+      "Leads development technical strategies in areas of expertise.",
+      "Identifies, gains support for, and ensures execution of  strategic direction in areas of expertise."
+    ],
+    accountability: [
+      "Responsible for nominated technical assets related to areas of expertise. Includes roadmaps and technical direction."
+    ],
+    leadership: [
+      "Technical leadership in areas of expertise within the platform and contribution to the group level.",
+      "TTeam member and mentor/support for more junior consultants."
+    ],
+    team: []
   },
   role_tech_3: {
     name: "Specialist Consultant",
-    nutshell: "",
-    competency: "",
-    delivery: "",
-    personal: "",
-    practice: "",
-    strategy: "",
-    accountability: "",
-    leadership: "",
-    team: ""
+    nutshell: [
+      "Advanced capability and impact. Responsibility for technology and/or practice areas."
+    ],
+    competency: [
+      "Demonstrates advanced competency in core technology capabilities and practices and clearly demonstrates outstanding competency in one or more key areas.",
+      "Demonstrates competency in relevant underlying or adjacent technology and practices",
+      "Utilises and makes contribution to industry resources and practices",
+      "Seen as an expert by industry standards",
+    ],
+    delivery: [
+      "Independently undertakes moderately to highly complex tasks and will take on the most difficult aspects.",
+      "Oversees and supports more junior consultants, providing expert guidance in key areas.",
+      "Contributes to delivery planning with expert advice.",
+      "Demonstrates innovation through concrete application of technical skills to complex business problems."
+    ],
+    personal: [
+      "Maintains core capabilities and domain knowledge at an advanced level.",
+      "Continuous development in areas of specialist expertise, utilising a wide range of internal and external resources.",
+    ],
+    practice: [
+      "Leader and champion of strategic practice development within team/platform.",
+      "Regularly contributes to team/platform practice activities."
+    ],
+    strategy: [
+      "Has a strong understanding of core business and technical strategies and how own role and broader practice relates to those strategies.  Actively identifies and address operational concerns, long term sustainability, etc.",
+      "Leads development technical strategies in areas of expertise.",
+      "Identifies, gains support for, and ensures execution of  strategic direction in areas of expertise.",
+    ],
+    accountability: [
+      "Responsible for nominated technical assets related to areas of expertise. Includes roadmaps and technical direction."
+    ],
+    leadership: [
+      "Technical leadership in areas of expertise.",
+      "Team member and mentor/support for more junior consultants."
+    ],
+    team: []
   },
   role_manager_1: {
     name: "Executive Manager",
-    nutshell: "",
-    competency: "",
-    delivery: "",
-    personal: "",
-    practice: "",
-    strategy: "",
-    accountability: "",
-    leadership: "",
-    team: ""
+    nutshell: [
+      "Experienced people manager of large teams including managers.",
+      "Actively contributes to and leads technology, people and practice activities across the group."
+    ],
+    competency: [
+      "Maintaining competency in relevant technology and practices.",
+      "Demonstrates growing competency in relevant adjacent or underlying technology and practices",
+    ],
+    delivery: [
+      "Accountable use of appropriate practices and standards across delivery initiatives.",
+      "Works closely with senior delivery leadership and practice managers to ensure teams are set up for success.",
+      "Contributes to delivery strategy at the group level"
+    ],
+    personal: [
+      "As for Senior Manager with larger scale and increased emphasis on developing  leaders and leadership across the group.",
+    ],
+    practice: [
+      "Accountable for the strategic development and implementation of practices relevant to the domain.",
+      "Leads and contributes to development of practices across the group."
+    ],
+    strategy: [
+      "Has a strong understanding of, and contributes too, core business and technical strategies.",
+      "Accountable for adoption across teams.",
+      "Contributes to technology and practice strategy at the group level.",
+    ],
+    accountability: [
+      "Strong awareness of key assets and accountability for alignment of technical practices to them."
+    ],
+    leadership: [
+      "Provide strong people and practice leadership across a platform.",
+      "Ensure collaboration across platform teams.",
+      "Team member and mentor/support for more junior consultants."
+    ],
+    team: [
+      "Accountable for team capability and talent",
+      "Ensure team structure supports delivery and practice needs.",
+      "Lead and contribute to group-wide people and practice initiatives."
+    ]
   },
   role_manager_2: {
     name: "Senior Manager",
-    nutshell: "",
-    competency: "",
-    delivery: "",
-    personal: "",
-    practice: "",
-    strategy: "",
-    accountability: "",
-    leadership: "",
-    team: ""
+    nutshell: [
+      "Experienced people manager."
+    ],
+    competency: [
+      "Maintaining competency in relevant technology and practices.",
+      "Demonstrates growing competency in relevant adjacent or underlying technology and practices."
+    ],
+    delivery: [
+      "Persuasively represents practise and quality concerns in a delivery focussed environment.",
+      "Ensures that technical delivery processes are tuned for quality and efficiency.",
+      "Works closely with delivery leadership to ensure that appropriately team members are assigned and set up for success."
+    ],
+    personal: [
+      "As for manager with increased emphasis on career development of team members and at larger scale.",
+    ],
+    practice: [
+      "Contributes to strategic development of practices and manages adoption across teams."
+    ],
+    strategy: [
+      "Has a strong understanding of, and contributes too, core business and technical strategies.",
+      "Manages adoption across teams."
+    ],
+    accountability: [
+      "Strong awareness of key assets and ensures technical practices are appropriate for them."
+    ],
+    leadership: [
+      "Provide strong people and practice leadership across multiple teams.",
+      "Collaborates across platforms.",
+      "Team member and mentor/support for more junior consultants."
+    ],
+    team: [
+      "Recruit, induct and retain high quality team members.",
+      "Ensure skills mix meets current and predicted needs.",
+      "Drive cultural and process changes supporting modern delivery practices."
+    ]
   },
   role_manager_3: {
-    name: "Manager",
-    nutshell: "",
-    competency: "",
-    delivery: "",
-    personal: "",
-    practice: "",
-    strategy: "",
-    accountability: "",
-    leadership: "",
-    team: ""
+    name: "Manager / Team Lead",
+    nutshell: [
+      "First foray into people management with a small team."
+    ],
+    competency: [
+      "Demonstrates advanced competency in core technology and practices.",
+      "Demonstrates growing competency in relevant adjacent or underlying technology and practices"
+    ],
+    delivery: [
+      "Mentors and assists team members in delivery activities",
+      "Manage task allocation of initiatives to most effectively meet delivery and strategic priorities"
+    ],
+    personal: [
+      "Personal development weighted toward mentoring, people leadership and communications.",
+    ],
+    practice: [
+      "Supports team in execution of practices."
+    ],
+    strategy: [
+      "Has a strong understanding of core business and technical strategies and supports own team in understanding and working in harmony with those strategies."
+    ],
+    accountability: [
+      "Awareness of key assets and how technical practices relate to them."
+    ],
+    leadership: [
+      "Provide people and practice leadership to a small team.",
+      "Team member and mentor/support for more junior consultants."
+    ],
+    team: [
+      "Support Senior Manager in Team Development activities.",
+      "Provide guidance and mentoring to team members."
+    ]
   },
 }
 
